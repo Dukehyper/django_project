@@ -9,8 +9,11 @@
                 <form method="POST">
                     {% csrf_token %}
                     {{ form|crispy }}
-                    <button type="submit"class="btn btn-primary">Sign Up</button>
+                    <button type="submit" class="btn btn-primary">Sign Up</button>
                 </form>
+            </div>
+            <div class="card-footer text-muted text-center">
+                New to Django Boards? <a href="{% url 'signup' %}">Sign up</a>
             </div>
         </div>
     </div>
