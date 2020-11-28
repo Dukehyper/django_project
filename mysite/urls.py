@@ -17,10 +17,20 @@ from django.contrib import admin
 from django.urls import path,include
 from mysite.core import views
 
+from django.conf import settings
+from django.conf.urls.static import static
+
+
 urlpatterns = [
     path('',views.home,name='home'),
     path('admin/', admin.site.urls),
     path('signup/',views.signup,name='signup'),
     path('accounts/',include('django.contrib.auth.urls')),
     path('secret/',views.secret_page,name='secret'),
+    path('bookhere/',views.booking,name='bookhere'),
 ]
+
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
+
