@@ -24,9 +24,16 @@ def signup(request):
     return render(request,'registration/signup.html',{
         'form':form
     })
-
+@login_required
 def secret_page(request):
     return render(request,'registration/secret_page.html') 
-@login_required
+
+
 def booking(request):
     return render(request,'booking/bookhere.html')
+
+def aboutus(request):
+    return render(request,'booking/aboutus.html')
+
+def contactus(request):
+    return render(request,'booking/contactus.html')

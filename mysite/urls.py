@@ -28,6 +28,8 @@ urlpatterns = [
     path('accounts/',include('django.contrib.auth.urls')),
     path('secret/',views.secret_page,name='secret'),
     path('bookhere/',views.booking,name='bookhere'),
+    path('aboutus/',views.aboutus,name='aboutus'),
+    path('contactus/',views.contactus,name='contactus'),
 ]
 
 
